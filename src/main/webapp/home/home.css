@@ -1,0 +1,197 @@
+/* Reset some default styles */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif; /* New font */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f4f4f4; */
+    background-color: #F3E9D2;
+}
+
+
+header {
+    /* background-color: #333;
+    color: #fff;
+    padding: 10px; */
+    background-color: #990000;
+    /* background-color: rgb(255, 254, 249);  */
+    padding-bottom: 0px; /* Added padding */
+}
+
+nav {
+    text-align: center; /* Centered nav */
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+    display: inline-block; /* Center the nav menu */
+    
+}
+
+nav ul a:hover {
+    background-color: #FFC72C; /* Light grey background on hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+
+nav ul li {
+    position: relative;
+    display: inline; /* Align items in a row */
+    margin-right: 20px;
+}
+
+
+nav ul li a {
+    color: #ffffff; /* Updated color */
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+
+    background-color: #990000;
+    padding: 10px;
+
+    background-color: #990000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    border: 1px solid #ccc; /* Add a subtle border */
+    margin-top: 5px; /* Space from the main menu */
+    width: auto;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul li ul li {
+    margin-right: 0;
+    display: block; /* Each item on its own line */
+    padding: 5px 10px; /* Padding for better touch area and visual appeal */
+    width: 100%; /* Ensures full width usage */
+    text-align: left; /* Align text to the left */
+    margin-right: 0; /* Resets any right margin */
+}
+
+nav ul li ul li a {
+    display: block; /* Allows the anchor tag to fill the li element */
+    width: 100%; /* Anchor takes full width of li */
+}
+
+
+
+.top-image-banner {
+    width: 100%; /* Full width */
+    height: 150px; /* Reduced height, set it to what you need */
+    background-image: url('dining2.webp'); /* Your image path */
+    background-position: center center; /* Centers the image */
+    background-size: cover; /* Cover ensures the container is fully covered */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding-bottom: 20px;
+}
+
+/* Ensure the footer is at the bottom */
+body, html {
+    height: 100%; /* Set to full height */
+    margin: 0;
+}
+
+
+main {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    flex-wrap: wrap;
+    
+}
+
+.dining-hall {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    width: 30%; /* Set a width */
+    min-height: 250px; /* Set a minimum height */
+    margin-bottom: 20px; /* Add some space at the bottom */
+}
+
+.rating {
+    margin-bottom: 10px;
+}
+
+.reviews {
+    height: 100px;
+    overflow-y: scroll;
+}
+
+.dining-hall-link {
+    display: inline-block;
+    background-color: #990000;
+    /* background-color: #ff6600; */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    
+}
+
+.dining-hall-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.instagram-embed {
+    padding-bottom: 40px;
+}
+
+
+.weather-widget {
+    display: flex;
+    justify-content: center; /* Centers the child horizontally */
+    padding-bottom: 100px;
+    
+}
+
+#weather-container {
+	font-size: 14px; /* Smaller font size */
+    line-height: 1.2; /* Tighter line spacing */
+    width: 100%;
+    max-width: 300px; /* Adjust this value based on your preference */
+    padding: 10px;
+    background-color: #fff; /* White background for the container */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Ensures text inside is centered */
+}
+
+
+footer {
+    background-color: #990000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+
+    position: fixed; /* Stick to the bottom */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}

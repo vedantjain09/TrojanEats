@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USC Dining Hall Review</title>
+    <link rel="stylesheet" href="parkside.css">
+    <style>
+    	.reviews-container {
+    		position: relative;
+			width: 400px;
+			height: 450px;
+			background: transparent;
+			border: 2px solid rgba(255, 255, 255, 0.5);
+			border-radius: 20px;
+			backdrop-filter: blur(25px);
+			color: #FFF;
+			padding: 20px;
+			overflow-y: auto; 
+		}
+		
+		.form-container {
+    		position: relative;
+			width: 400px;
+			height: 450px;
+			background: transparent;
+			border: 2px solid rgba(255, 255, 255, 0.5);
+			border-radius: 20px;
+			backdrop-filter: blur(25px);
+			color: white;
+			margin-left: 90px;
+			padding: 20px;
+		}
+    </style>
+    <script src="parkside.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../home/home.html">HOME</a></li>
+                <li>
+                    <a href="../dropdown/dropdown.html">DINING HALLS</a>
+                    <ul>
+                        <li><a href="../dininghalls/evk.html">EVK</a></li>
+                        <li><a href="../dininghalls/village.html">Village</a></li>
+                        <li><a href="../dininghalls/parkside.html">Parkside</a></li>
+                    </ul>
+                </li>
+                <li><a href="../journal/journal.html">JOURNAL</a></li>
+                <li><a href="../login/login.html">LOGIN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content-container">
+        <aside class="reviews-container">
+            <h3>Average Rating</h3>
+            <p id="rating">4.5/5 Stars</p> 
+            <h3>Recent Reviews</h3>
+            <ul class="reviews-list">
+                <li>Great experience at Parkside! - 5 Stars</li> 
+                <li>Loved the desserts at Parkside. - 4 Stars</li>
+                <li>Loved the desserts at Parkside. - 4 Stars</li>
+                <li>Loved the desserts at Parkside. - 4 Stars</li>
+                <li>Loved the desserts at Parkside. - 4 Stars</li>
+                <li>Loved the desserts at Parkside. - 4 Stars</li>
+                <li>Loved the desserts at Parkside. - 4 Stars</li>
+                <li>Loved the desserts at Parkside. - 4 Stars</li>
+                <li>Loved the desserts at Parkside. - 4 Stars</li>
+                <li>Loved the desserts at Parkside. - 4 Stars</li>
+                <li>Loved the desserts at Parkside. - 4 Stars</li>
+                <li>Loved the desserts at Parkside. - 4 Stars</li>
+                <li>Loved the desserts at Parkside. - 4 Stars</li>
+            </ul>
+        </aside>
+        <div class="form-container">
+        	<h3 style="text-align:center">Submit a Review</h3> <br>
+            <form action="PostServlet" method="post" onsubmit="submitPost(event)">
+                <fieldset>
+                    <legend>Select a Dining Hall:</legend>
+                    <label><input type="radio" name="hall" value="1"> Village</label>
+                    <label><input type="radio" name="hall" value="2"> Parkside</label>
+                    <label><input type="radio" name="hall" value="3"> EVK</label>
+                </fieldset>
+                <label for="rating">Rate your meal (1-5):</label>
+                <div class="star-rating">
+                    <input type="number" id="score" name="rating" min="1" max="5" required>
+                </div>
+                <label for="review">Enter your review here:</label>
+                <textarea id="review" name="review" placeholder="Enter your review here"></textarea> <br>
+                <button type="submit" >Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

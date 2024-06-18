@@ -1,0 +1,197 @@
+/* Reset some default styles */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif; /* New font */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f4f4f4; */
+    background-color: #F3E9D2;
+}
+
+
+header {
+    /* background-color: #333;
+    color: #fff;
+    padding: 10px; */
+    background-color: #990000;
+    /* background-color: rgb(255, 254, 249);  */
+    padding-bottom: 0px; /* Added padding */
+}
+
+nav {
+    text-align: center; /* Centered nav */
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+    display: inline-block; /* Center the nav menu */
+    
+}
+
+nav ul a:hover {
+    background-color: #FFC72C; /* Light grey background on hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+
+nav ul li {
+    position: relative;
+    display: inline; /* Align items in a row */
+    margin-right: 20px;
+}
+
+
+nav ul li a {
+    color: #ffffff; /* Updated color */
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+
+    background-color: #990000;
+    padding: 10px;
+
+    background-color: #990000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    border: 1px solid #ccc; /* Add a subtle border */
+    margin-top: 5px; /* Space from the main menu */
+    width: auto;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul li ul li {
+    margin-right: 0;
+    display: block; /* Each item on its own line */
+    padding: 5px 10px; /* Padding for better touch area and visual appeal */
+    width: 100%; /* Ensures full width usage */
+    text-align: left; /* Align text to the left */
+    margin-right: 0; /* Resets any right margin */
+}
+
+nav ul li ul li a {
+    display: block; /* Allows the anchor tag to fill the li element */
+    width: 100%; /* Anchor takes full width of li */
+}
+
+.top-image-banner {
+    width: 100%; /* Full width */
+    height: 150px; /* Reduced height, set it to what you need */
+    background-image: url('dining2.webp'); /* Your image path */
+    background-position: center center; /* Centers the image */
+    background-size: cover; /* Cover ensures the container is fully covered */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding-bottom: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+#calendar {
+    width: 40%;
+}
+
+
+#calendar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#calendar {
+    width: 600px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#calendar-header {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.calendar-day {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.calendar-day:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#selected-day-reviews {
+    margin-top: 20px;
+    width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    min-height: 100px;
+}
+
+#journal-entries {
+    width: 55%;
+}
+
+.sorting-options {
+    margin-bottom: 10px;
+}
+
+#entries-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.journal-entry {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.journal-entry-details {
+    display: none;
+}
+
+.show-details .journal-entry-details {
+    display: block;
+}

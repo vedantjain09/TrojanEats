@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+header {
+    width: 100%; /* Ensure header extends full width */
+    /* background-color: #333;
+    color: #fff;
+    padding: 10px; */
+    background-color: #990000;
+    /* background-color: rgb(255, 254, 249);  */
+    padding-bottom: 0px; /* Added padding */
+
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Make sure it stays on top of other content */
+}
+
+nav {
+    text-align: center; /* Centered nav */
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+    display: inline-block; /* Center the nav menu */
+    
+}
+
+nav ul a:hover {
+    background-color: #FFC72C; /* Light grey background on hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+
+nav ul li {
+    position: relative;
+    display: inline; /* Align items in a row */
+    margin-right: 20px;
+}
+
+
+nav ul li a {
+    color: #ffffff; /* Updated color */
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+
+    background-color: #990000;
+    padding: 10px;
+
+    background-color: #990000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    border: 1px solid #ccc; /* Add a subtle border */
+    margin-top: 5px; /* Space from the main menu */
+    width: auto;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul li ul li {
+    margin-right: 0;
+    display: block; /* Each item on its own line */
+    padding: 5px 10px; /* Padding for better touch area and visual appeal */
+    width: 100%; /* Ensures full width usage */
+    text-align: left; /* Align text to the left */
+    margin-right: 0; /* Resets any right margin */
+}
+
+nav ul li ul li a {
+    display: block; /* Allows the anchor tag to fill the li element */
+    width: 100%; /* Anchor takes full width of li */
+}
+
+
+body {
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /*https://hospitality.usc.edu/wp-content/uploads/2015/06/01_parkside_slider.jpg*/
+    /*https://hospitality.usc.edu/wp-content/uploads/2015/06/04_evk_slider.jpg*/
+    background-image: url('https://hospitality.usc.edu/wp-content/uploads/2015/06/04_evk_slider.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="radio"],
+input[type="number"],
+textarea {
+    margin-top: 5px;
+}
+
+.star-rating {
+    margin-bottom: 15px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #FFC72C; 
+    color: #990000; 
+    border: 2px solid #FFC72C;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #b20000;
+}
+.content-container {
+    display: flex;
+    flex-direction: row;  
+    justify-content: center;  
+    align-items: start;  
+    width: 100%;  
+    max-width: 1200px; 
+    margin: 20px auto; 
+    padding: 20px;  
+}
+
+.reviews-container h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.reviews-container p {
+    text-align: center;
+    font-size: 1.5em; 
+}
+
+.reviews-list li {
+	list-style-type: none;
+    background-color: #f0f0f0; 
+    color: #000; 
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.reviews-list li:not(:last-child) {
+    border-bottom: 1px solid #FFC72C;
+}

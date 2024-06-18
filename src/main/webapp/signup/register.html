@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="register.css">
+    <script src="register.js"></script>
+    <style>
+    	select{
+    		background-color: transparent;
+    		color: black;
+    	}
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="form-box">
+            <form action="Register" method="post" onsubmit="verifyRegister(event)">
+                <h2>Sign Up</h2>
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="email" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <input type="text" required>
+                    <label for="">Username</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" required>
+                    <label for="">Password</label>
+                </div>
+                <div>
+                    <select id="dietaryRestrictions">
+                        <option value="0" disabled selected>Select Dietary Restrictions</option>
+                        <option value="1">Vegan Diet</option>
+                        <option value="2">Vegetarian Diet</option>
+                        <option value="3">No Dietary Restrictions</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <select id="dietaryGoals">
+                        <option value="0" disabled selected>Select Dietary Goals</option>
+                        <option value="1">Lose Weight</option>
+                        <option value="2">Maintain Weight</option>
+                        <option value="3">Gain Weight</option>
+                    </select>
+                </div>
+                <br>
+                <button type="submit">Sign Up</button>
+                <div class="register">
+                    <p>Back to <a href="../login/login.html">Login</a> | Continue as <a href="../home/home.html">Guest</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

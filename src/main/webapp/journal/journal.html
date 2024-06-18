@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining Hall Journal</title>
+    <link rel="stylesheet" href="journal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../home/home.html">HOME</a></li>
+                <li>
+                    <a href="../dropdown/dropdown.html">DINING HALLS</a>
+                    <ul>
+                        <li><a href="../dininghalls/evk.html">EVK</a></li>
+                        <li><a href="../dininghalls/village.html">Village</a></li>
+                        <li><a href="../dininghalls/parkside.html">Parkside</a></li>
+                    </ul>
+                </li>
+                <li><a href="../journal/journal.html">JOURNAL</a></li>
+                <li><a href="../login/login.html">LOGIN</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <div class="top-image-banner"></div>
+
+    <main>
+        <!-- <section id="calendar">
+        </section> -->
+
+        <section id="calendar-section">
+            <div id="calendar"></div>
+            <div id="selected-day-reviews"></div>
+        </section>
+
+        <section id="journal-entries">
+            <h2>Journal Entries</h2>
+            <div class="sorting-options">
+                <label for="sorting-select">Sort by:</label>
+                <select id="sorting-select">
+                    <option value="date">Date</option>
+                    <option value="rating">Rating</option>
+                    <option value="diningHall">Dining Hall</option>
+                </select>
+            </div>
+            <div id="entries-container"></div>
+        </section>
+    </main>
+
+    <script src="journal.js"></script>
+</body>
+</html>

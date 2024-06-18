@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+header {
+    width: 100%; /* Ensure header extends full width */
+    /* background-color: #333;
+    color: #fff;
+    padding: 10px; */
+    background-color: #990000;
+    /* background-color: rgb(255, 254, 249);  */
+    padding-bottom: 0px; /* Added padding */
+
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Make sure it stays on top of other content */
+}
+
+nav {
+    text-align: center; /* Centered nav */
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+    display: inline-block; /* Center the nav menu */
+    
+}
+
+nav ul a:hover {
+    background-color: #FFC72C; /* Light grey background on hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+
+nav ul li {
+    position: relative;
+    display: inline; /* Align items in a row */
+    margin-right: 20px;
+}
+
+
+nav ul li a {
+    color: #ffffff; /* Updated color */
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+
+    background-color: #990000;
+    padding: 10px;
+
+    background-color: #990000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    border: 1px solid #ccc; /* Add a subtle border */
+    margin-top: 5px; /* Space from the main menu */
+    width: auto;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul li ul li {
+    margin-right: 0;
+    display: block; /* Each item on its own line */
+    padding: 5px 10px; /* Padding for better touch area and visual appeal */
+    width: 100%; /* Ensures full width usage */
+    text-align: left; /* Align text to the left */
+    margin-right: 0; /* Resets any right margin */
+}
+
+nav ul li ul li a {
+    display: block; /* Allows the anchor tag to fill the li element */
+    width: 100%; /* Anchor takes full width of li */
+}
+
+
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: url('https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/rockcms/2022-04/220429-usc-se-1100a-3606ce.jpg');
+    background-color: #f8f8f8;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.button-container {
+    text-align: center;
+ 
+}
+
+
+.village-button{
+	padding: 20px 40px;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border: 2px solid #990000;
+    background-color:#990000;
+    color: #ffffff;
+    border-radius: 5px;
+    outline: none;
+    text-decoration: none;
+}
+.evk-button{
+	padding: 20px 40px;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border: 2px solid #FFC72C;
+    background-color: #FFC72C;
+    color: #ffffff;
+    border-radius: 5px;
+    outline: none;
+    text-decoration: none;
+}
+.parkside-button{
+	padding: 20px 40px;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border: 2px solid #990000;
+    background-color: #990000;
+    color: #ffffff;
+    border-radius: 5px;
+    outline: none;
+    text-decoration: none;
+}
+
+.village-button:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.evk-button:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.parkside-button:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+.large-button:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: scale(1.05);
+    
+}
+
+

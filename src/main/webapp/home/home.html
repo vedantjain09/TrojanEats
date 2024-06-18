@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining Hall Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="home.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="alternate" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <nav> 
+            <ul>
+                <li><a href="../home/home.html">HOME</a></li>
+                <li>
+                    <a href="../dropdown/dropdown.html">DINING HALLS</a>
+                    <ul>
+                        <li><a href="../dininghalls/evk.html">EVK</a></li>
+                        <li><a href="../dininghalls/village.html">Village</a></li>
+                        <li><a href="../dininghalls/parkside.html">Parkside</a></li>
+                    </ul>
+                </li>
+                <li><a href="../journal/journal.html">JOURNAL</a></li>
+                <li><a href="../login/login.html">LOGIN</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <div class="top-image-banner"></div>
+
+    <main>
+        <section class="dining-hall">
+            <h2 class="animate__animated animate__bounce">EVK<i class="bi bi-people-fill" style="color: burlywood;"></i>
+            </h2>
+            <div class="rating" id="EVK">
+                <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <div id="EVKreviews">
+            </div>
+            <a href="../dininghalls/evk.html" class="dining-hall-link">Visit EVK</a>
+        </section>
+
+        <section class="dining-hall">
+            <h2 class="animate__animated animate__bounce">Village<i class="bi bi-house" style="color: sandybrown;"></i>
+            </h2>
+            <div class="rating" id="Village">
+                <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+            </div>
+            <div id="Villagereviews">
+            </div>
+            <a href="../dininghalls/village.html" class="dining-hall-link">Visit Village</a>
+        </section>
+
+        <section class="dining-hall">
+            <h2 class="animate__animated animate__bounce">Parkside<i class="bi bi-tree-fill" style="color: green;"></i>
+            </h2>
+            <div class="rating" id="Parkside">
+                <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <div id="Parksidereviews">
+            </div>
+            <a href="../dininghalls/parkside.html" class="dining-hall-link">Visit Parkside</a>
+        </section>
+    </main>
+
+    
+
+    <section class="instagram-embed">
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-6b5687b9-794b-4d1c-b831-919ff302939e" data-elfsight-app-lazy></div>
+    <section class="weather-widget">
+    <div id="weather-container" class="card blue-grey darken-1">
+        <div class="card-content white-text">
+            <span class="card-title">Current Weather</span>
+            <p id="weather"></p>
+        </div>
+    </div> 
+</section>
+    </section>
+<div id="map" style="width: 100%; height: 500px;"></div>
+
+    <footer>
+        <a href="../login/login.html">LOGIN</a>
+        <a href="../signup/register.html">SIGN UP</a>
+    </footer>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoidHJtYTIwMjUiLCJhIjoiY2x2cmlpb2M5MG5vMTJscnJtcWU2enMwNiJ9.4jKYCC-pmaeJcyp8AOOk1w';
+var map = new mapboxgl.Map({
+    container: 'map', 
+    style: 'mapbox://styles/mapbox/streets-v11', 
+    center: [-118.2851, 34.0224], 
+    zoom: 15 
+});
+
+
+var parkside=new mapboxgl.Marker()
+    .setLngLat([-118.29078, 34.01929]); 
+    parkside.addTo(map);
+    var parksidePopup = new mapboxgl.Popup({ offset: 25 })
+    .setText('Parkside')
+    .addTo(map);
+parkside.setPopup(parksidePopup);
+var evk=new mapboxgl.Marker()
+.setLngLat([-118.28201,34.02182]); 
+evk.addTo(map);
+var evkPopup = new mapboxgl.Popup({ offset: 25 })
+.setText('EVK')
+.addTo(map);
+evk.setPopup(evkPopup);
+var village=new mapboxgl.Marker()
+.setLngLat([-118.28642,  34.02596]); 
+village.addTo(map);
+var villagePopup = new mapboxgl.Popup({ offset: 25 })
+.setText('Village')
+.addTo(map);
+village.setPopup(villagePopup);
+</script>
+    <script src="weatherapi.js"></script>
+</body>
+</html>
